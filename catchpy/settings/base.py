@@ -79,11 +79,11 @@ WSGI_APPLICATION = PROJECT_NAME + '.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'naomi7',
-        'USER': 'postgres',
-        'PASSWORD': 'moria',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': os.environ.get('CATCHPY_DB_NAME', 'naomi7'),
+        'USER': os.environ.get('CATCHPY_DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('CATCHPY_DB_PASSWORD', 'moria'),
+        'HOST': os.environ.get('CATCHPY_DB_HOST', 'localhost'),
+        'PORT': os.environ.get('CATCHPY_DB_PORT', '5432'),
         'ATOMIC_REQUESTS': False,
     },
 }
