@@ -6,7 +6,7 @@ import sys
 if __name__ == "__main__":
     dotenv_path = os.environ.get(
         'CATCHPY_DOTENV_PATH',
-        join(dirname(__file__), 'catchpy/settings/sample.env'))
+        join(dirname(__file__), 'catchpy/catchpy.env'))
     load_dotenv(dotenv_path)
 
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "catchpy.settings.dev")
