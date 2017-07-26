@@ -2,6 +2,7 @@
 import os
 import sys
 
+from dotenv import load_dotenv
 import django
 from django.conf import settings
 
