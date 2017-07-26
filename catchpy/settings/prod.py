@@ -24,7 +24,8 @@ SECRET_KEY = os.environ.get('CATCHPY_SECRET_KEY', 'CHANGE_ME')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = os.environ.get(
+    'CATCHPY_ALLOWED_HOSTS', 'localhost 127.0.0.1').split()
 
 
 # Application definition
