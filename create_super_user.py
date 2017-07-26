@@ -17,9 +17,9 @@ if __name__ == "__main__":
     from django.contrib.auth.models import User
 
     # only creates admin user if it does not exists
+    username = os.environ.get('CATCHPY_ADMIN_USER', None)
+    password = os.environ.get('CATCHPY_ADMIN_PASSWORD', None)
     if User._default_manager.filter(username=username).count() == 0:
-        username = os.environ.get('CATCHPY_ADMIN_USER', None)
-        password = os.environ.get('CATCHPY_ADMIN_PASSWORD', None)
         if username and password:
             u = User(username=username)
             u.set_password(password)
