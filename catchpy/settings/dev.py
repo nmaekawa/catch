@@ -38,6 +38,18 @@ except ImportError:
 CATCH_RESPONSE_FORMAT = 'ANNOTATORJS_FORMAT'
 CATCH_RESPONSE_LIMIT = 200
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('CATCHPY_DB_NAME', 'catchpy'),
+        'USER': os.environ.get('CATCHPY_DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('CATCHPY_DB_PASSWORD', 'catchpy'),
+        'HOST': os.environ.get('CATCHPY_DB_HOST', 'localhost'),
+        'PORT': os.environ.get('CATCHPY_DB_PORT', '5432'),
+        'ATOMIC_REQUESTS': False,
+    },
+}
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

@@ -159,12 +159,12 @@ LOGGING = {
     'loggers': {
         'anno': {
             'level': 'DEBUG',
-            'handlers': ['console', 'errorfile_handler'],
+            'handlers': ['console'],
             'propagate': True
         },
         'consumer': {
             'level': 'DEBUG',
-            'handlers': ['console', 'errorfile_handler'],
+            'handlers': ['console'],
             'propagate': True
         },
         'root': {

@@ -35,15 +35,6 @@ LOGGING = {
             'formatter': 'simple',
             'stream': 'ext://sys.stdout',
         },
-        'errorfile_handler': {
-            'level': 'DEBUG',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'simple',
-            'filename': 'catchpy_errors.log',
-            'maxBytes': 10485760,  # 10MB
-            'backupCount': 7,
-            'encoding': 'utf8',
-        },
     },
     'loggers': {
         'anno': {
